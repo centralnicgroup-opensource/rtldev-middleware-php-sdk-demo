@@ -1,0 +1,16 @@
+{
+    "name": "hexonet/php-sdk-demo",
+    "description": "PHP SDK Demo App",
+    "type": "project",
+    "require": {
+        "hexonet/php-sdk": "^3.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kai Schwarz",
+            "email": "kschwarz@hexonet.net"
+        }
+    ],
+    "minimum-stability": "stable"
+}
