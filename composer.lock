@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84d749533edda24d2eca20a9444a4a02",
+    "content-hash": "5ca63ef0221242470b30ad496d39a798",
     "packages": [
         {
             "name": "hexonet/php-sdk",
-            "version": "v3.0.0",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hexonet/php-sdk.git",
-                "reference": "c34761f88e9f44c755cf128c7d9aec8cb195d3ea"
+                "reference": "034c492e5c9f29084207fc0a0c657451b570cafc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hexonet/php-sdk/zipball/c34761f88e9f44c755cf128c7d9aec8cb195d3ea",
-                "reference": "c34761f88e9f44c755cf128c7d9aec8cb195d3ea",
+                "url": "https://api.github.com/repos/hexonet/php-sdk/zipball/034c492e5c9f29084207fc0a0c657451b570cafc",
+                "reference": "034c492e5c9f29084207fc0a0c657451b570cafc",
                 "shasum": ""
             },
             "require": {
@@ -74,7 +74,7 @@
                 "sdk",
                 "ssl"
             ],
-            "time": "2018-06-21T14:39:57+00:00"
+            "time": "2018-07-03T14:49:06+00:00"
         }
     ],
     "packages-dev": [],

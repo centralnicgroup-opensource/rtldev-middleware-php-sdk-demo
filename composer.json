@@ -3,7 +3,7 @@
     "description": "PHP SDK Demo App",
     "type": "project",
     "require": {
-        "hexonet/php-sdk": "^3.0"
+        "hexonet/php-sdk": "*"
     },
     "license": "MIT",
     "authors": [
