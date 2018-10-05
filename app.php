@@ -5,18 +5,42 @@ require __DIR__ . '/vendor/autoload.php';
 //require_once __DIR__ . '/vendor/hexonet/php-sdk/src/Connection.php';
 
 // --- SESSIONLESS API COMMUNICATION ---
-$api = \HEXONET\Connection::connect(array(
-    "url" => "https://coreapi.1api.net/api/call.cgi",
-    "login" => "test.user",
-    "password" => "test.passw0rd",
-    "entity" => "1234"
-));
-
-$r = $api->call(array(
-    "COMMAND" => "StatusAccount"
+echo "--- SESSION-LESS API COMMUNICATION ----<br/>";
+$cl = new \HEXONET\APIClient();
+$cl->useOTESystem()//LIVE System would be used otherwise by default
+   // ->setRemoteIPAddress("1.2.3.4:80"); // provide ip address used for active ip filter
+   ->setCredentials("test.user", "test.passw0rd");
+$r = $cl->request(array(
+    "COMMAND" => "StatusAccount
 ));
 echo "<pre>" . htmlspecialchars(print_r($r->asHash(), true)) . "</pre>";
 
 // --- SESSION BASED API COMMUNICATION ---
-
-// TODO - this needs a review of the PHP SDK itself
+echo "--- SESSION-BASED API COMMUNICATION ----<br/>";
+$cl = new \HEXONET\APIClient();
+$cl->useOTESystem()//LIVE System would be used otherwise by default
+   ->setCredentials("test.user", "test.passw0rd");
+$r = $cl->login();
+// or this line for using 2FA
+// $r = $cl->login('.. here your otp code ...');
+if ($r->isSuccess()){
+    echo "LOGIN SUCCEEDED.<br/>";
+    
+    // Now reuse the created API session for further requests
+    // You don't have to care about anything!
+    $r = $cl->request(array(
+        "COMMAND" => "StatusAccount
+    ));
+    echo "<pre>" . htmlspecialchars(print_r($r->asHash(), true)) . "</pre>"; 
+    
+    // Perform session close and logout    
+    $r = $cl->logout();
+    if ($r->isSuccess()){
+        echo "LOGOUT SUCCEEDED.<br/>";
+    else {
+        echo "LOGOUT FAILED.<br/>";
+    }
+}
+else {
+    echo "LOGIN FAILED.<br/>";
+}
