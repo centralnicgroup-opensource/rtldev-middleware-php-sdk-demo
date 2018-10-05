@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "hexonet/php-sdk",
-            "version": "v3.0.3",
+            "version": "v4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hexonet/php-sdk.git",
-                "reference": "034c492e5c9f29084207fc0a0c657451b570cafc"
+                "reference": "b0c09d19f99b6587cdb733608b47e94cab8f936b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hexonet/php-sdk/zipball/034c492e5c9f29084207fc0a0c657451b570cafc",
-                "reference": "034c492e5c9f29084207fc0a0c657451b570cafc",
+                "url": "https://api.github.com/repos/hexonet/php-sdk/zipball/b0c09d19f99b6587cdb733608b47e94cab8f936b",
+                "reference": "b0c09d19f99b6587cdb733608b47e94cab8f936b",
                 "shasum": ""
             },
             "require": {
@@ -74,7 +74,7 @@
                 "sdk",
                 "ssl"
             ],
-            "time": "2018-07-03T14:49:06+00:00"
+            "time": "2018-10-05T09:44:38+00:00"
         }
     ],
     "packages-dev": [],
