@@ -8,23 +8,22 @@
     "packages": [
         {
             "name": "hexonet/php-sdk",
-            "version": "v4.0.2",
+            "version": "v4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hexonet/php-sdk.git",
-                "reference": "b0c09d19f99b6587cdb733608b47e94cab8f936b"
+                "reference": "a8cd73394a006dc6c0e6b70197a39b5373d96322"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hexonet/php-sdk/zipball/b0c09d19f99b6587cdb733608b47e94cab8f936b",
-                "reference": "b0c09d19f99b6587cdb733608b47e94cab8f936b",
+                "url": "https://api.github.com/repos/hexonet/php-sdk/zipball/a8cd73394a006dc6c0e6b70197a39b5373d96322",
+                "reference": "a8cd73394a006dc6c0e6b70197a39b5373d96322",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.0.0"
             },
             "require-dev": {
-                "php-mock/php-mock-phpunit": "^2.1",
                 "phpunit/phpunit": "^7",
                 "squizlabs/php_codesniffer": "^3.3"
             },
@@ -74,7 +73,7 @@
                 "sdk",
                 "ssl"
             ],
-            "time": "2018-10-05T09:44:38+00:00"
+            "time": "2019-04-04T08:11:33+00:00"
         }
     ],
     "packages-dev": [],
