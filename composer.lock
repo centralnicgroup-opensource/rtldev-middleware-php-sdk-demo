@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "hexonet/php-sdk",
-            "version": "v4.5.1",
+            "version": "v4.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hexonet/php-sdk.git",
-                "reference": "ec3694df1b02c4cc3c945fd4511001e4ea2d9ea4"
+                "reference": "a51d5f11d5ae804819f65a25526ddcb9d01fc180"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hexonet/php-sdk/zipball/ec3694df1b02c4cc3c945fd4511001e4ea2d9ea4",
-                "reference": "ec3694df1b02c4cc3c945fd4511001e4ea2d9ea4",
+                "url": "https://api.github.com/repos/hexonet/php-sdk/zipball/a51d5f11d5ae804819f65a25526ddcb9d01fc180",
+                "reference": "a51d5f11d5ae804819f65a25526ddcb9d01fc180",
                 "shasum": ""
             },
             "require": {
@@ -39,15 +39,15 @@
             "authors": [
                 {
                     "name": "Anthony Schneider",
+                    "role": "Developer",
                     "email": "anthonys@hexonet.net",
-                    "homepage": "https://hexonet.net",
-                    "role": "Developer"
+                    "homepage": "https://hexonet.net"
                 },
                 {
                     "name": "Kai Schwarz",
+                    "role": "Developer",
                     "email": "kschwarz@hexonet.net",
-                    "homepage": "https://hexonet.net",
-                    "role": "Developer"
+                    "homepage": "https://hexonet.net"
                 }
             ],
             "description": "API connector library for the insanely fast HEXONET backend API",
@@ -69,7 +69,7 @@
                 "sdk",
                 "ssl"
             ],
-            "time": "2019-06-14T15:51:51+00:00"
+            "time": "2019-08-16T15:31:24+00:00"
         }
     ],
     "packages-dev": [],
