@@ -17,6 +17,8 @@ composer update
 php app.php
 ```
 
+Check the [source code](https://raw.githubusercontent.com/centralnic-reseller/php-sdk-demo/master/app.php) for details.
+
 ## Your project
 
 Just include "centralnic-reseller/php-sdk" with its latest version as dependency in your composer.json.
