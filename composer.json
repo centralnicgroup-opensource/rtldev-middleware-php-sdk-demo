@@ -1,16 +1,16 @@
 {
-    "name": "hexonet/php-sdk-demo",
-    "description": "PHP SDK Demo App",
-    "type": "project",
-    "require": {
-        "hexonet/php-sdk": "*"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Kai Schwarz",
-            "email": "kschwarz@hexonet.net"
-        }
-    ],
-    "minimum-stability": "stable"
+  "name": "hexonet/php-sdk-demo",
+  "description": "PHP SDK Demo App",
+  "type": "project",
+  "require": {
+    "centralnic-reseller/php-sdk": "*"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kai Schwarz",
+      "email": "kschwarz@hexonet.net"
+    }
+  ],
+  "minimum-stability": "stable"
 }

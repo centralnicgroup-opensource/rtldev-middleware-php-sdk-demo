@@ -6,7 +6,9 @@ require __DIR__ . '/vendor/autoload.php';
 
 // --- SESSIONLESS API COMMUNICATION ---
 echo "--- SESSION-LESS API COMMUNICATION ----<br/>";
-$cl = new \HEXONET\APIClient();
+$cl = \CNIC\ClientFactory::getClient([
+    "registrar" => "HEXONET"
+]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    // ->setRemoteIPAddress("1.2.3.4:80"); // provide ip address used for active ip filter
    ->setCredentials("test.user", "test.passw0rd");
@@ -17,7 +19,9 @@ echo "<pre>" . htmlspecialchars(print_r($r->getHash(), true)) . "</pre>";
 
 // --- SESSION BASED API COMMUNICATION ---
 echo "--- SESSION-BASED API COMMUNICATION ----<br/>";
-$cl = new \HEXONET\APIClient();
+$cl = \CNIC\ClientFactory::getClient([
+    "registrar" => "HEXONET"
+]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    ->setCredentials("test.user", "test.passw0rd");
 $r = $cl->login();
