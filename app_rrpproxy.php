@@ -1,49 +1,51 @@
 <?php
 
 require __DIR__ . '/vendor/autoload.php';
-//as autoloading for functions is not available 
-//require_once __DIR__ . '/vendor/hexonet/php-sdk/src/Connection.php';
+
+$user = $argv[1];
+$password = $argv[2];
 
 // --- SESSIONLESS API COMMUNICATION ---
-echo "--- SESSION-LESS API COMMUNICATION ----<br/>";
+echo "--- SESSION-LESS API COMMUNICATION ----\n";
 $cl = \CNIC\ClientFactory::getClient([
-    "registrar" => "HEXONET"
+    "registrar" => "RRPproxy"
 ]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    // ->setRemoteIPAddress("1.2.3.4:80"); // provide ip address used for active ip filter
-   ->setCredentials("test.user", "test.passw0rd");
-$r = $cl->request(array(
+   ->setCredentials($user, $password);
+$r = $cl->request([
     "COMMAND" => "StatusAccount"
-));
-echo "<pre>" . htmlspecialchars(print_r($r->getHash(), true)) . "</pre>";
+]);
+print_r($r->getHash());
 
 // --- SESSION BASED API COMMUNICATION ---
-echo "--- SESSION-BASED API COMMUNICATION ----<br/>";
+echo "--- SESSION-BASED API COMMUNICATION ----\n";
 $cl = \CNIC\ClientFactory::getClient([
     "registrar" => "HEXONET"
 ]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
-   ->setCredentials("test.user", "test.passw0rd");
+   ->setCredentials($user, $password);
 $r = $cl->login();
 // or this line for using 2FA
 // $r = $cl->login('.. here your otp code ...');
 if ($r->isSuccess()){
-    echo "LOGIN SUCCEEDED.<br/>";
+    echo "LOGIN SUCCEEDED.\n";
     
     // Now reuse the created API session for further requests
     // You don't have to care about anything!
-    $r = $cl->request(array(
+    $r = $cl->request([
         "COMMAND" => "StatusAccount"
-    ));
-    echo "<pre>" . htmlspecialchars(print_r($r->getHash(), true)) . "</pre>"; 
+    ]);
+    print_r($r->getHash()); 
     
     // Perform session close and logout    
     $r = $cl->logout();
     if ($r->isSuccess()){
-        echo "LOGOUT SUCCEEDED.<br/>";
+        echo "LOGOUT SUCCEEDED.\n";
     } else {
-        echo "LOGOUT FAILED.<br/>";
+        echo "LOGOUT FAILED.\n";
     }
 } else {
-    echo "LOGIN FAILED.<br/>";
+    echo "LOGIN FAILED.\n";
+    echo "NOTE: Session-based communication not yet correctly supported for RRPproxy.";
 }

@@ -10,11 +10,22 @@ Having php, php-curl and composer installed globally.
 
 Run our demo app!
 
+Simple Example for HEXONET:
+
 ```bash
-git clone https://github.com/centralnic-reseller/php-sdk-demo
-cd php-sdk-demo
+git clone https://github.com/centralnic-reseller/php-sdk-demo php-sdk-demo-hexonet
+cd php-sdk-demo-hexonet
 composer update
-php app.php
+php app_hexonet.php <your account id> <your password>
+```
+
+Simple Example for RRPproxy:
+
+```bash
+git clone https://github.com/centralnic-reseller/php-sdk-demo php-sdk-demo-rrpproxy
+cd php-sdk-demo-rrpproxy
+composer update
+php app_rrpproxy.php <your account id> <your password>
 ```
 
 Check the [source code](https://raw.githubusercontent.com/centralnic-reseller/php-sdk-demo/master/app.php) for details.
