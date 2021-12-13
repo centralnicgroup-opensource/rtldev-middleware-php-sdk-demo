@@ -11,7 +11,7 @@ $cl = \CNIC\ClientFactory::getClient([
     "registrar" => "HEXONET"
 ]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
-   // ->setRemoteIPAddress("1.2.3.4:80"); // provide ip address used for active ip filter
+   //->setRemoteIPAddress("1.2.3.4") // provide ip address used for active ip filter
    ->setCredentials($user, $password);
 $r = $cl->request([
     "COMMAND" => "StatusAccount"
@@ -24,6 +24,7 @@ $cl = \CNIC\ClientFactory::getClient([
     "registrar" => "HEXONET"
 ]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
+   //->setRemoteIPAddress("1.2.3.4") // provide ip address used for active ip filter
    ->setCredentials($user, $password);
 $r = $cl->login();
 // or this line for using 2FA
