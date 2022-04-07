@@ -1,5 +1,5 @@
 {
-  "name": "hexonet/php-sdk-demo",
+  "name": "centralnic-reseller/php-sdk-demo",
   "description": "PHP SDK Demo App",
   "type": "project",
   "require": {
