@@ -21,7 +21,7 @@ print_r($r->getHash());
 // --- SESSION BASED API COMMUNICATION ---
 echo "--- SESSION-BASED API COMMUNICATION ----\n";
 $cl = \CNIC\ClientFactory::getClient([
-    "registrar" => "HEXONET"
+    "registrar" => "RRPproxy"
 ]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    ->setCredentials($user, $password);
