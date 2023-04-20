@@ -38,5 +38,5 @@ jobs:
           TESTS_USERPASSWORD_RRPPROXY: ${{ secrets.TESTS_USERPASSWORD_RRPPROXY }}
         run: |
           php app_hexonet.php $TESTS_USER_HEXONET $TESTS_USERPASSWORD_HEXONET
-          php app_rrpproxy.php $TESTS_USER_RRPPROXY $TESTS_USERPASSWORD_RRPPROXY
+          php app_cnr.php $TESTS_USER_RRPPROXY $TESTS_USERPASSWORD_RRPPROXY
         
