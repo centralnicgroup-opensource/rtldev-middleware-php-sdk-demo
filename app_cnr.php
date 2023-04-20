@@ -8,7 +8,7 @@ $password = $argv[2];
 // --- SESSIONLESS API COMMUNICATION ---
 echo "--- SESSION-LESS API COMMUNICATION ----\n";
 $cl = \CNIC\ClientFactory::getClient([
-    "registrar" => "RRPproxy"
+    "registrar" => "CNR" // fka RRPproxy
 ]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    // ->setRemoteIPAddress("1.2.3.4:80"); // provide ip address used for active ip filter
@@ -21,7 +21,7 @@ print_r($r->getHash());
 // --- SESSION BASED API COMMUNICATION ---
 echo "--- SESSION-BASED API COMMUNICATION ----\n";
 $cl = \CNIC\ClientFactory::getClient([
-    "registrar" => "RRPproxy"
+    "registrar" => "CNR" // fka RRPproxy
 ]);
 $cl->useOTESystem()//LIVE System would be used otherwise by default
    ->setCredentials($user, $password);
