@@ -4,13 +4,14 @@ on:
 
 jobs:
   test:
-    name: 🧪 Testing
     if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.actor != 'dependabot[bot]')
+    name: 🧪 Testing    
+    runs-on: ${{ vars.RTLDEV_MW_CI_OS }}
+    permissions:
+      contents: read
     strategy:
       matrix:
-        php-version:
-          - 7.4
-    runs-on: ubuntu-latest
+        php-version: ${{ fromJson(vars.RTLDEV_MW_CI_PHP_MATRIX) }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
